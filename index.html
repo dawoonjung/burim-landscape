@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>부림조경 | 양주 조경공사 전문</title>
-  <meta name="description" content="양주 장흥면에 위치한 부림조경. 40년 이상의 역사와 소나무 전문성을 바탕으로 고급 단독주택, 골프장, 수목장, 준공 조경 등 다양한 조경공사를 수행합니다." />
+  <title>부림조경 | 소나무 전문 · 서울·경기 조경공사</title>
+  <meta name="description" content="40년 이상의 연륜으로 소나무 판매, 조경 관리, 옥상 조경, 전원주택·고급주택 조경을 수행합니다. 서울·경기 전 지역 방문 상담 가능. 031-855-6186" />
   <style>
     :root {
       --bg: #f5f2ec;
@@ -92,10 +92,80 @@
     .contact-actions a { background:#fff; color:#1f3226; }
     .contact-actions .ghost { background: transparent; color:#fff; border-color: rgba(255,255,255,0.28); }
     footer { padding: 28px 0 46px; color: var(--muted); font-size: 0.95rem; }
+    .footer-inner { display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap; margin-bottom:16px; }
+    .footer-inner strong { display:block; color:var(--text); font-size:1rem; margin-bottom:6px; }
+    .footer-inner p { margin:0; line-height:1.6; }
+    .footer-right { text-align:right; }
+    .footer-right p { margin:0; }
+    .footer-copy { margin:0; font-size:0.82rem; }
+
+    /* Stats bar */
+    .stats-bar {
+      display:grid; grid-template-columns:repeat(4,1fr);
+      background:var(--primary); border-radius:var(--radius);
+      padding:32px 24px; margin-bottom:0;
+    }
+    .stat { display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px; padding:12px 0; border-right:1px solid rgba(255,255,255,0.18); }
+    .stat:last-child { border-right:none; }
+    .stat-num { font-size:clamp(1.8rem,3vw,2.4rem); font-weight:800; color:#fff; letter-spacing:-0.04em; line-height:1; }
+    .stat-label { font-size:0.85rem; color:rgba(255,255,255,0.72); font-weight:500; }
+
+    /* 5-card services grid */
+    .cards-5 { display:grid; grid-template-columns:repeat(6,1fr); gap:18px; margin-top:22px; }
+    .cards-5 .card:nth-child(1),
+    .cards-5 .card:nth-child(2),
+    .cards-5 .card:nth-child(3) { grid-column:span 2; }
+    .cards-5 .card:nth-child(4),
+    .cards-5 .card:nth-child(5) { grid-column:span 3; }
+
+    /* Badge */
+    .badge { display:inline-flex; align-items:center; background:#e8f0ea; color:var(--primary); font-size:0.76rem; font-weight:700; padding:3px 9px; border-radius:999px; margin-bottom:10px; }
+
+    /* Service area */
+    .area-box { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:36px 32px; }
+    .area-tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+    .tag { background:#e8f0ea; color:var(--primary); border-radius:999px; padding:6px 14px; font-size:0.92rem; font-weight:600; }
+    .area-note { color:var(--muted); font-size:0.88rem; margin-top:12px; margin-bottom:0; }
+
+    /* Owner quote */
+    .owner-quote { margin:24px 0 0; padding:20px 24px; border-left:4px solid var(--primary); background:var(--surface); border-radius:0 14px 14px 0; }
+    .owner-quote p { margin:0 0 8px; font-style:italic; font-size:1.05rem; color:var(--text); line-height:1.7; }
+    .owner-quote cite { color:var(--muted); font-size:0.9rem; font-style:normal; }
+
+    /* FAQ accordion */
+    .faq-list { margin-top:22px; display:flex; flex-direction:column; gap:12px; }
+    .faq-item { background:var(--surface); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+    .faq-q { display:flex; justify-content:space-between; align-items:center; padding:18px 22px; font-weight:700; font-size:1rem; cursor:pointer; list-style:none; gap:12px; }
+    .faq-q::-webkit-details-marker { display:none; }
+    .faq-q::after { content:'+'; font-size:1.3rem; font-weight:400; color:var(--primary); flex-shrink:0; }
+    details[open] .faq-q::after { content:'−'; }
+    .faq-a { padding:0 22px 18px; color:var(--muted); line-height:1.7; }
+    .faq-a p { margin:0; }
+
+    /* Consultation steps */
+    .steps { display:flex; align-items:flex-start; gap:8px; margin:24px 0 28px; flex-wrap:wrap; }
+    .step { display:flex; align-items:flex-start; gap:14px; flex:1; min-width:160px; }
+    .step-num { width:36px; height:36px; border-radius:50%; background:var(--primary); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1rem; flex-shrink:0; }
+    .step strong { display:block; font-size:0.97rem; margin-bottom:4px; }
+    .step p { margin:0; color:var(--muted); font-size:0.88rem; }
+    .step-arrow { color:var(--muted); font-size:1.4rem; padding-top:6px; flex-shrink:0; align-self:center; }
+
     @media (max-width: 900px) {
-      .hero-grid, .history, .cards { grid-template-columns: 1fr; }
+      .hero-grid, .history, .cards, .cards-5 { grid-template-columns: 1fr; }
+      .cards-5 .card { grid-column: span 1 !important; }
       .hero { padding-top: 44px; }
       .photo-card, .photo-card img { min-height: 300px; }
+      .footer-right { text-align:left; }
+    }
+    @media (max-width: 600px) {
+      .stats-bar { grid-template-columns:repeat(2,1fr); }
+      .stat:nth-child(2) { border-right:none; }
+      .stat:nth-child(3) { border-right:1px solid rgba(255,255,255,0.18); }
+      .stat:nth-child(1), .stat:nth-child(2) { border-bottom:1px solid rgba(255,255,255,0.18); }
+      .step-arrow { display:none; }
+      .steps { gap:16px; }
+      .step { flex:100%; }
+      .area-box { padding:24px 20px; }
     }
   </style>
 </head>
@@ -105,7 +175,7 @@
     <div class="wrap nav">
       <a href="#top" class="brand" aria-label="부림조경 홈으로 이동">
         <strong>부림조경</strong>
-        <span>양주 조경공사 전문</span>
+        <span>서울·경기 조경공사 전문</span>
       </a>
       <a class="cta" href="tel:031-855-6186" aria-label="부림조경 전화 걸기">전화 문의 031-855-6186</a>
     </div>
@@ -114,12 +184,12 @@
     <section class="hero wrap" id="top">
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">40년 이상의 역사 · 소나무 전문 · 양주 이전 운영</div>
-          <h1>오랜 현장 경험으로<br>품격 있는 조경을 만듭니다.</h1>
-          <p class="lead">부림조경은 서울 구파발에서 시작해 양주로 이전한 뒤에도 조경 시공을 이어온 업체입니다. 소나무 전문성을 바탕으로 고급 단독주택 조경, 골프장, 수목장, 준공 조경 등 다양한 프로젝트를 수행합니다.</p>
+          <div class="eyebrow">40년 연륜 · 소나무 전문 · 서울·경기 전 지역</div>
+          <h1>수십 년의 현장 연륜,<br>그 하나로 다릅니다.</h1>
+          <p class="lead">부림조경은 서울 구파발에서 시작해 40년 이상 조경 현장을 지켜온 업체입니다. 소나무 판매부터 옥상 조경, 전원주택, 조경 관리까지 — 쌓인 경험이 시공의 품질을 만듭니다.</p>
           <div class="hero-actions">
-            <a class="cta" href="tel:031-855-6186">바로 전화하기</a>
-            <a class="ghost" href="#contact">문의 안내 보기</a>
+            <a class="cta" href="tel:031-855-6186">전화로 바로 문의</a>
+            <a class="ghost" href="#services">서비스 보기</a>
           </div>
         </div>
         <div class="photo-card" aria-label="부림조경 대표 이미지">
@@ -127,39 +197,153 @@
                   </div>
       </div>
     </section>
-    <section class="wrap" aria-labelledby="strengths-title">
-      <h2 class="section-title" id="strengths-title">부림조경이 하는 일</h2>
-      <p class="section-copy">오랜 시공 경험과 수목 전문성을 바탕으로 공간의 성격과 용도에 맞는 조경 공사를 진행합니다.</p>
-      <div class="cards">
-        <article class="card"><h3>고급 단독주택 조경</h3><p>주택의 분위기와 수목의 품격을 함께 고려해 공간의 첫인상을 정리하는 조경 공사를 진행합니다.</p></article>
-        <article class="card"><h3>소나무 및 수목 전문</h3><p>소나무를 중심으로 한 수목 식재와 조경 구성 경험을 바탕으로 현장에 맞는 수형과 배치를 제안합니다.</p></article>
-        <article class="card"><h3>다양한 조경 공사</h3><p>골프장, 수목장, 준공 조경 등 다양한 유형의 프로젝트를 수행하며 현장 조건에 맞춰 대응합니다.</p></article>
+    <section class="stats-bar wrap" aria-label="부림조경 주요 수치">
+      <div class="stat">
+        <span class="stat-num">40년+</span>
+        <span class="stat-label">현장 경험</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">21개</span>
+        <span class="stat-label">서울·경기 서비스 지역</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">5가지</span>
+        <span class="stat-label">전문 서비스</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3년</span>
+        <span class="stat-label">시공 하자 보증</span>
       </div>
     </section>
-    <section class="wrap" aria-labelledby="story-title">
-      <h2 class="section-title" id="story-title">회사 이야기</h2>
+
+    <section class="wrap" id="services" aria-labelledby="services-title" style="padding:64px 0 32px;">
+      <h2 class="section-title" id="services-title">5가지 전문 서비스</h2>
+      <p class="section-copy">40년의 경험이 축적된 분야만 합니다 — 소나무 판매부터 조경 관리, 옥상·전원주택·고급주택 조경까지 현장 중심으로 대응합니다.</p>
+      <div class="cards-5">
+        <article class="card">
+          <span class="badge">핵심 서비스</span>
+          <h3>소나무 판매</h3>
+          <p>현장에서 직접 고르는 수목 전문 판매. 수형·규격·상태까지 경험으로 판단해 최적의 소나무를 제안합니다. 소나무 가격은 나무마다 다르므로 전화로 문의해 주세요.</p>
+        </article>
+        <article class="card">
+          <span class="badge">핵심 서비스</span>
+          <h3>조경 관리 / 유지보수</h3>
+          <p>식재 후 나무 생육 관리, 정기 점검, 전정(가지치기), 시비까지. 조경은 심고 나서가 더 중요합니다.</p>
+        </article>
+        <article class="card">
+          <span class="badge">핵심 서비스</span>
+          <h3>준공수 / 관목 판매</h3>
+          <p>준공 조경용 수목과 관목을 전문으로 판매합니다. 골프장, 수목장, 아파트 준공 등 현장 규모와 용도에 맞는 수종을 제안합니다.</p>
+        </article>
+        <article class="card">
+          <h3>옥상 조경</h3>
+          <p>건물 옥상 공간의 특성(하중, 배수, 일조)을 고려한 전문 조경. 도심 건물의 녹지 공간을 완성합니다.</p>
+        </article>
+        <article class="card">
+          <h3>전원주택 · 고급주택 조경</h3>
+          <p>주택의 분위기와 수목의 품격을 함께 고려해 공간의 첫인상을 완성합니다. 서울 도심 고급주택부터 외곽 전원주택까지.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="area" aria-labelledby="area-title" style="padding:0 0 64px;">
+      <div class="area-box">
+        <h2 class="section-title" id="area-title">서비스 지역</h2>
+        <p class="section-copy" style="margin:0;max-width:none;">서울 전 지역과 경기도 21개 지역에서 방문 상담 및 시공이 가능하며, 현장을 직접 확인한 후 정확한 견적을 안내드립니다.</p>
+        <div class="area-tags">
+          <span class="tag">서울 전 지역</span>
+          <span class="tag">경기도 21개 지역</span>
+          <span class="tag">현장 방문 무료 상담</span>
+        </div>
+        <p class="area-note">※ 도면이나 사진으로도 초기 상담 가능합니다. 정확한 견적은 현장 방문 후 안내드립니다.</p>
+      </div>
+    </section>
+    <section class="wrap" aria-labelledby="story-title" style="padding:64px 0;">
+      <h2 class="section-title" id="story-title">부림조경 이야기</h2>
       <div class="history">
         <div class="panel">
-          <h3>브랜드 배경</h3>
-          <p>부림조경은 40년 이상 이어온 조경 업체로, 원래 서울 은평구 구파발에 있었다가 은평뉴타운 개발로 토지가 수용되면서 양주로 이전해 운영을 이어가고 있습니다.</p>
+          <h3>연륜의 시작</h3>
+          <p>부림조경은 서울 구파발에서 시작해 40년 이상 조경 현장을 지켜왔습니다. 은평뉴타운 개발로 터전이 수용되면서도 양주로 자리를 옮겨 조경을 이어온 업체입니다. 흔들린 적 있어도 멈추지 않았습니다.</p>
         </div>
         <div class="panel">
-          <h3>핵심 포인트</h3>
+          <h3>핵심 강점</h3>
           <ul class="list">
-            <li>40년 이상의 역사와 현장 경험</li>
-            <li>소나무 전문성과 고급 수목 조경 이미지</li>
-            <li>단독주택, 골프장, 수목장, 준공 조경까지 이어지는 폭넓은 실적</li>
-            <li>상담부터 시공까지 이어지는 실무 중심 대응</li>
+            <li><strong>연륜</strong> — 수십 년의 현장 경험이 눈대중이 아닌 정확한 판단을 만듭니다</li>
+            <li><strong>소나무 전문성</strong> — 수형·규격·가격을 현장에서 바로 판단합니다</li>
+            <li><strong>폭넓은 실적</strong> — 단독주택, 골프장, 수목장, 옥상, 준공 조경까지</li>
+            <li><strong>하자 보증</strong> — 시공 공사 후 하자 보증 (아파트 기준 3년)</li>
+            <li><strong>발품을 파는 상담</strong> — 현장을 직접 보고 정확하게 안내합니다</li>
           </ul>
         </div>
       </div>
+      <blockquote class="owner-quote">
+        <p>"아무래도 연륜이죠. 오래된, 이 많은 경험 경험치. 풍부한 경험 — 그걸로 봐야지요."</p>
+        <cite>— 부림조경 대표</cite>
+      </blockquote>
     </section>
-    <section class="wrap" id="contact" aria-labelledby="contact-title">
+
+    <section class="wrap" id="faq" aria-labelledby="faq-title" style="padding:0 0 64px;">
+      <h2 class="section-title" id="faq-title">자주 묻는 질문</h2>
+      <p class="section-copy">고객분들이 가장 많이 궁금해하시는 내용을 정리했습니다.</p>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-q">소나무 가격이 궁금한데 온라인으로 알 수 있나요?</summary>
+          <div class="faq-a">
+            <p>소나무는 수형, 규격, 수령, 산지 조건에 따라 가격이 크게 다릅니다. 같은 크기라도 수형이 좋은 나무는 몇 배 차이가 날 수 있어서 온라인에서 정확한 가격을 안내드리기 어렵습니다. 원하시는 나무의 대략적인 크기나 용도를 전화로 말씀해 주시면 바로 안내드립니다.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">나무를 심고 나서 잘 살아날지 걱정됩니다. 관리는 어떻게 하나요?</summary>
+          <div class="faq-a">
+            <p>식재 직후 활착 기간이 가장 중요합니다. 부림조경은 시공 후 생육 관리(물주기 조언, 전정, 시비 시기 안내)를 함께 안내드립니다. 정기 관리가 필요하신 경우 조경 관리 서비스도 제공합니다. 나무 생육에 관한 궁금한 점은 언제든 전화 주시면 경험으로 안내드립니다.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">시공 후 나무가 죽거나 문제가 생기면 어떻게 되나요? 하자 보증이 있나요?</summary>
+          <div class="faq-a">
+            <p>시공 공사에 대해서는 하자 보증이 적용됩니다. 아파트 준공 조경의 경우 3년 하자 보증을 이행합니다. 단, 단순 판매(나무만 구매하신 경우)는 식재 후 관리가 고객 몫이므로 구분이 됩니다. 시공 계약 시 하자 보증 범위를 정확히 안내드립니다.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">견적은 어떻게 받을 수 있나요? 온라인으로도 가능한가요?</summary>
+          <div class="faq-a">
+            <p>조경 공사는 현장 조건에 따라 내용이 달라지기 때문에 정확한 견적은 현장 방문 후 안내드립니다. 초기 상담은 전화 또는 도면·사진을 바탕으로도 가능합니다. 서울·경기 전 지역 방문 가능하니 편하게 연락 주세요.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+    <section class="wrap" id="contact" aria-labelledby="contact-title" style="padding:64px 0;">
       <h2 class="section-title" id="contact-title">문의 안내</h2>
-      <p class="section-copy">조경 공사 상담, 현장 문의, 시공 가능 여부는 전화로 편하게 문의해 주세요.</p>
+      <p class="section-copy">조경 공사 상담, 소나무 가격 문의, 현장 방문 일정은 전화로 편하게 연락해 주세요.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <div>
+            <strong>전화 문의</strong>
+            <p>원하시는 내용, 대략적인 위치와 규모를 알려주세요.</p>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <div>
+            <strong>현장 방문</strong>
+            <p>서울·경기 전 지역 직접 방문해 현장을 확인합니다.</p>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <div>
+            <strong>견적 및 시공</strong>
+            <p>현장 조건에 맞는 정확한 견적과 시공 일정을 안내합니다.</p>
+          </div>
+        </div>
+      </div>
       <div class="contact-box">
-        <h3>부림조경</h3>
-        <p>경기도 양주시 장흥면 북한산로 1031 · 조경공사 · 전화 031-855-6186</p>
+        <h3>부림조경에 문의하기</h3>
+        <p>조경 공사 상담, 소나무 가격 문의, 현장 방문 일정은 전화로 편하게 연락해 주세요. 서울·경기 전 지역 방문 가능합니다.</p>
+        <p>경기도 양주시 장흥면 북한산로 1031 · 전화 031-855-6186</p>
         <div class="contact-actions">
           <a class="cta" href="tel:031-855-6186">전화 문의</a>
           <a class="ghost" href="https://map.naver.com/p/entry/place/13452763" target="_blank" rel="noopener noreferrer">네이버 지도 보기</a>
@@ -168,7 +352,19 @@
     </section>
   </main>
   <footer>
-    <div class="wrap">부림조경 · 양주 조경공사 전문</div>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div>
+          <strong>부림조경</strong>
+          <p>소나무 전문 · 조경 관리 · 옥상·전원·고급주택 조경<br>경기도 양주시 장흥면 북한산로 1031</p>
+        </div>
+        <div class="footer-right">
+          <p>031-855-6186</p>
+          <p>서울·경기 전 지역 서비스</p>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 부림조경. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
