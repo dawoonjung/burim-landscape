@@ -182,6 +182,16 @@
     }
     .gallery .tall figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 40px 14px 12px; color: #f6f3ec; background: linear-gradient(transparent, rgba(33,29,23,0.65)); }
 
+    /* yard */
+    .yard-lead figcaption,
+    .yard-grid figcaption { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.03em; padding-top: 10px; }
+    .yard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+    .yard-grid img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .yard-visit { margin-top: 20px; color: var(--muted); font-size: 0.95rem; max-width: 62ch; }
+    .yard-visit p { margin: 0 0 12px; }
+    .yard-addr { display: flex; align-items: baseline; gap: 8px 18px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--line); }
+    .yard-addr span { color: var(--ink); font-weight: 600; }
+
     /* story */
     .story-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: start; }
     .story-grid p { margin: 0 0 20px; }
@@ -275,6 +285,7 @@
       .ba { grid-template-columns: 1fr; }
       .gallery { grid-template-columns: 1fr; }
       .gallery .tall { grid-row: auto; }
+      .yard-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -388,9 +399,38 @@
       </div>
     </section>
 
+    <section class="wrap" id="yard" aria-labelledby="yard-title">
+      <div class="sec-head">
+        <p class="sec-num">03 — 양주 농원</p>
+        <h2 id="yard-title">직접 보고 고르는, 양주 농원</h2>
+        <p class="sec-copy">부림조경은 경기도 양주 장흥에 자리한 조경 농원입니다. 엄선한 소나무를 이곳에서 관리하며, 방문하시면 수형과 상태를 직접 보고 고르실 수 있습니다.</p>
+      </div>
+      <figure class="yard-lead">
+        <img src="img/burim-office.jpg" alt="부림조경 양주 농원 전경 — '부림조경' 간판이 걸린 사무실과 조형 소나무, 석물" width="1600" height="901" loading="lazy" />
+        <figcaption>경기도 양주 장흥 · 부림조경 농원</figcaption>
+      </figure>
+      <div class="yard-grid">
+        <figure>
+          <img src="img/burim-yard.jpg" alt="부림조경 농원 마당 — 넓은 부지에 자리한 조형 소나무들" width="1600" height="901" loading="lazy" />
+          <figcaption>관리 중인 조형 소나무</figcaption>
+        </figure>
+        <figure>
+          <img src="img/burim-work.jpg" alt="농원에서 크레인으로 소나무를 굴취·상차하는 작업" width="1600" height="686" loading="lazy" />
+          <figcaption>소나무 굴취·상차 작업</figcaption>
+        </figure>
+      </div>
+      <div class="yard-visit">
+        <p>소나무 가격은 나무마다 다릅니다. 방문해 직접 보고 고르시는 것이 가장 정확합니다. 전화 주시면 방문 상담을 안내해 드립니다.</p>
+        <div class="yard-addr">
+          <span>경기도 양주시 장흥면 북한산로 1031</span>
+          <a class="textlink" href="https://map.naver.com/p/entry/place/13452763" target="_blank" rel="noopener noreferrer">네이버 지도에서 보기</a>
+        </div>
+      </div>
+    </section>
+
     <section class="wrap" id="story" aria-labelledby="story-title">
       <div class="sec-head">
-        <p class="sec-num">03 — 부림조경 이야기</p>
+        <p class="sec-num">04 — 부림조경 이야기</p>
         <h2 id="story-title">구파발에서 양주까지</h2>
       </div>
       <div class="story-grid">
@@ -413,7 +453,7 @@
 
     <section class="wrap" id="faq" aria-labelledby="faq-title">
       <div class="sec-head">
-        <p class="sec-num">04 — 자주 묻는 질문</p>
+        <p class="sec-num">05 — 자주 묻는 질문</p>
         <h2 id="faq-title">전화 주시기 전에</h2>
       </div>
       <div class="faq-list">
@@ -447,7 +487,7 @@
     <section id="contact" aria-labelledby="contact-title" style="padding-bottom:0;">
       <div class="wrap">
         <div class="sec-head">
-          <p class="sec-num">05 — 문의</p>
+          <p class="sec-num">06 — 문의</p>
           <h2 id="contact-title">상담은 이렇게 진행됩니다</h2>
         </div>
         <div class="steps">
