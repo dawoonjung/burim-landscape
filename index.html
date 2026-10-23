@@ -25,21 +25,82 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "부림조경",
-    "description": "40년 경력 소나무 전문 조경업체. 소나무 판매, 조경 관리·유지보수, 옥상 조경, 전원주택·고급주택 조경.",
-    "telephone": "+82-31-855-6186",
-    "url": "https://www.xn--289al0wv0cb0o.com/",
-    "image": "https://www.xn--289al0wv0cb0o.com/img/og-image.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "장흥면 북한산로 1031",
-      "addressLocality": "양주시",
-      "addressRegion": "경기도",
-      "addressCountry": "KR"
-    },
-    "areaServed": ["서울특별시", "경기도"],
-    "hasMap": "https://map.naver.com/p/entry/place/13452763"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.xn--289al0wv0cb0o.com/#website",
+        "url": "https://www.xn--289al0wv0cb0o.com/",
+        "name": "부림조경",
+        "inLanguage": "ko-KR",
+        "publisher": { "@id": "https://www.xn--289al0wv0cb0o.com/#business" }
+      },
+      {
+        "@type": ["HomeAndConstructionBusiness", "GardenStore"],
+        "@id": "https://www.xn--289al0wv0cb0o.com/#business",
+        "name": "부림조경",
+        "description": "부림조경은 경기도 양주시 장흥면에 있는 소나무 전문 조경업체입니다. 서울 구파발에서 시작해 40년 넘게 소나무 판매, 조경 관리·유지보수, 준공수·관목 판매, 옥상 조경, 전원주택·고급주택 조경을 해왔으며, 양주 농원에서 소나무를 직접 보고 고를 수 있습니다.",
+        "slogan": "나무를 심은 지 마흔 해가 되었습니다.",
+        "telephone": "+82-31-855-6186",
+        "url": "https://www.xn--289al0wv0cb0o.com/",
+        "image": [
+          "https://www.xn--289al0wv0cb0o.com/img/og-image.jpg",
+          "https://www.xn--289al0wv0cb0o.com/img/burim-office.jpg",
+          "https://www.xn--289al0wv0cb0o.com/img/burim-yard.jpg",
+          "https://www.xn--289al0wv0cb0o.com/img/yangju-after.jpg"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "장흥면 북한산로 1031",
+          "addressLocality": "양주시",
+          "addressRegion": "경기도",
+          "addressCountry": "KR"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "서울특별시" },
+          { "@type": "AdministrativeArea", "name": "경기도" }
+        ],
+        "hasMap": "https://map.naver.com/p/entry/place/13452763",
+        "sameAs": ["https://map.naver.com/p/entry/place/13452763"],
+        "knowsAbout": ["소나무", "조형 소나무", "소나무 식재", "전정(가지치기)", "조경 관리", "옥상 조경", "전원주택 조경", "준공 조경"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "부림조경 서비스",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "소나무 판매", "description": "현장에서 직접 고르는 수목 전문 판매. 수형·규격·상태를 경험으로 판단해 자리에 맞는 소나무를 제안합니다." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "조경 관리 · 유지보수", "description": "식재 후 생육 관리, 정기 점검, 전정(가지치기), 시비." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "준공수 · 관목 판매", "description": "골프장, 수목장, 아파트 준공 등 현장 규모와 용도에 맞는 준공 조경용 수목과 관목 공급." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "옥상 조경", "description": "하중·배수·일조 등 옥상 공간의 조건을 고려한 전문 조경." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "전원주택 · 고급주택 조경", "description": "서울 도심 고급주택부터 외곽 전원주택까지 주택 조경." } }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.xn--289al0wv0cb0o.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "소나무 가격이 궁금한데 온라인으로 알 수 있나요?",
+            "acceptedAnswer": { "@type": "Answer", "text": "소나무는 수형, 규격, 수령, 산지 조건에 따라 가격이 크게 다릅니다. 같은 크기라도 수형이 좋은 나무는 몇 배 차이가 날 수 있어 온라인으로 정확한 가격을 안내드리기 어렵습니다. 원하시는 나무의 대략적인 크기나 용도를 전화로 말씀해 주시면 바로 안내드립니다." }
+          },
+          {
+            "@type": "Question",
+            "name": "나무를 심고 나서 잘 살아날지 걱정됩니다. 관리는 어떻게 하나요?",
+            "acceptedAnswer": { "@type": "Answer", "text": "식재 직후 활착 기간이 가장 중요합니다. 부림조경은 시공 후 생육 관리(물주기 조언, 전정, 시비 시기 안내)를 함께 안내드립니다. 정기 관리가 필요하신 경우 조경 관리 서비스도 제공합니다. 나무 생육에 관한 궁금한 점은 언제든 전화 주시면 경험으로 안내드립니다." }
+          },
+          {
+            "@type": "Question",
+            "name": "시공 후 나무가 죽거나 문제가 생기면 어떻게 되나요?",
+            "acceptedAnswer": { "@type": "Answer", "text": "시공 범위와 조건에 따라 사후 처리 기준이 달라지므로, 계약 전에 범위를 명확히 안내드립니다. 단순 판매(나무만 구매하신 경우)는 식재 후 관리가 고객 몫이라 시공과는 구분됩니다. 궁금한 부분은 상담 때 편하게 물어봐 주세요." }
+          },
+          {
+            "@type": "Question",
+            "name": "견적은 어떻게 받을 수 있나요? 온라인으로도 가능한가요?",
+            "acceptedAnswer": { "@type": "Answer", "text": "조경 공사는 현장 조건에 따라 내용이 달라지기 때문에 정확한 견적은 현장 방문 후 안내드립니다. 초기 상담은 전화 또는 도면·사진으로도 가능합니다. 서울·경기 전 지역 방문하니 편하게 연락 주세요." }
+          }
+        ]
+      }
+    ]
   }
   </script>
   <style>
